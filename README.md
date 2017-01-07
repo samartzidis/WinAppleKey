@@ -12,7 +12,7 @@ that just renders the keyboard fully functional under Windows without any fancy 
 Specifically: 
 - Swaps the Fn-Ctrl keys to align with standard Windows keyboard layouts (not supported by Apple's Bootcamp driver).
 - Maps the missing Windows keys such as the Del, Insert, Print Screen, Pause/Break, etc.
-- Respects all the small details such as typematic properties of keys, something which was not possible with the older WinA1314 driver.
+- Respects all the small details such as typematic properties of keys, something which was not possible with the older [WinA1314](https://github.com/samartzidis/WinA1314) driver.
 - Includes an installer that automates the task of properly and cleanly installing the driver.
 
 Only 64-bit versions of Windows 10 are currently supported. You may also be able to install the driver on Windows 7, 8 or 8.1 (64-bit) but this has not been tested.
@@ -25,7 +25,7 @@ WinAppleKey is fully implemented as a HIDCLASS LowerFilter WDM kernel mode drive
 Sitting inbetween HIDCLASS and the bluetooth HID Transport driver allows the interpretation of input data 
 before they reach HIDCLASS and get splitted out into TLC interfaces as HID Hot Buttons or as KBDClass (normal keys) input. 
 This allows full and proper re-mapping of all of the keys (incl. Fn, Eject), by also respecting typematic properties. 
-The older [WinA1314](https://github.com/samartzidis/WinA1314) driver was not capable of that as it was implemented using *Francisco Lopes*'s [Interception](http://www.oblita.com/interception.html) driver, 
+The older WinA1314 driver was not capable of that as it was implemented using *Francisco Lopes*'s [Interception](http://www.oblita.com/interception.html) driver, 
 which is an UpperLevel filter KBDClass class driver. 
 
 As a completely kernel-mode based implementation, it is also more secure that WinA1314 
