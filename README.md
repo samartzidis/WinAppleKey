@@ -53,7 +53,7 @@ Please also make sure that you understand all the potential **[implications](htt
 
 **WinAppleKey** creates the following key mappings:
 
-  <table class="table-bordered" cellpadding="5">
+  <table>
     <tr>
       <th>Input Physical Key(s)</th>
       <th>Output Logical Key</th>
@@ -71,7 +71,7 @@ Please also make sure that you understand all the potential **[implications](htt
 
   And then:
 
-  <table class="table-bordered" cellpadding="5">
+  <table>
     <tr>
       <th>Input Logical Key(s)</th>
       <th>Output Logical Key</th>
@@ -101,10 +101,9 @@ Please also make sure that you understand all the potential **[implications](htt
       <td>Fn + Right</td><td>End</td>
     </tr>
   </table>
-  </br>
 
-  ### Build Instructions
+### Build Instructions
 
   For building the binaries (driver and installer) you will need **Visual Studio 2015** along with an installation of the 
-  **Windows 10 Driver Kit (WDK)**. For building the installer project, you will also need to install the **WiX toolset** (http://wixtoolset.org/) version v3.10.3
+  **Windows 10 Driver Kit (WDK)**. For building the installer project, you will also need to install the **[WiX toolset](http://wixtoolset.org/)** version v3.10.3
   or better. 
