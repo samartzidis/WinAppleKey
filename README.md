@@ -103,8 +103,8 @@ Please also make sure that you understand all the potential **[implications](htt
   </table>
 
 
-  ## Build Instructions
+  ### Build Instructions
 
   For building the binaries (driver and installer) you will need Visual Studio 2015 along with an installation of the 
-  Windows 10 Driver Kit (WDK). You will also need to install the WiX toolset (http://wixtoolset.org/) version v3.10.3
+  Windows 10 Driver Kit (WDK). For building the installer project, you will also need to install the WiX toolset (http://wixtoolset.org/) version v3.10.3
   or better. 
