@@ -10,6 +10,11 @@ Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "Setup", "Setup\Setup.wixpro
 		{66B51E72-5BBA-4FF2-85C5-3F923B98C156} = {66B51E72-5BBA-4FF2-85C5-3F923B98C156}
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A98F64D4-FB23-4B9F-A846-643547083C0F}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
