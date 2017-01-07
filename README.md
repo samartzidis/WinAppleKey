@@ -13,7 +13,7 @@ Specifically:
 - Swaps the Fn-Ctrl keys to align with standard Windows keyboard layouts (not supported by Apple's Bootcamp driver).
 - Maps the missing Windows keys such as the Del, Insert, Print Screen, Pause/Break, etc.
 - Respects all the small details such as typematic properties of keys, something which was not possible with the older [WinA1314](https://github.com/samartzidis/WinA1314) driver.
-- Includes an installer that automates the task of properly and cleanly installing the driver.
+- Includes an installer that automates the task of properly and cleanly installing or uninstalling the driver.
 
 Only 64-bit versions of Windows 10 are currently supported. You may also be able to install the driver on Windows 7, 8 or 8.1 (64-bit) but this has not been tested.
 
@@ -44,7 +44,7 @@ And for reverting TESTSIGNING mode:
 
 ``` Bcdedit.exe -set TESTSIGNING OFF ```
 
-Please make sure that you uninstall WinAppleKey from ```Control Panel``` ```Programs```, before you revert TESTSIGNING mode on your system, as if you forget to do so, all your Apple keyboard(s) will temporarily stop working.
+Please make sure that you uninstall WinAppleKey from ```Control Panel``` ```Programs```, before you revert TESTSIGNING mode on your system, as if you forget to do so, your Apple keyboard(s) will temporarily stop working.
 
 Please also make sure that you understand all the potential **[implications](https://msdn.microsoft.com/en-us/windows/hardware/drivers/install/the-testsigning-boot-configuration-option)** of running your system in TESTSIGNING mode before you proceed with the installation as well as the fact that WinAppleKey is ***free software*** that you are willing to build and use completely ***at your own risk.***
 
