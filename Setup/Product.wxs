@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<?define Version = "!(bind.fileVersion.WinAppleKeySYS)" ?>
+<Wix xmlns='http://schemas.microsoft.com/wix/2006/wi'
+     xmlns:difx='http://schemas.microsoft.com/wix/DifxAppExtension'
+     xmlns:iis='http://schemas.microsoft.com/wix/IIsExtension'>
+  <Product Name='WinAppleKey $(var.Version)' Id='FF0F05EE-71DE-4377-ABAF-8941B725FD2E' Language='1033' Codepage='1252' 
+           Version='$(var.Version)' Manufacturer='George Samartzidis' UpgradeCode='74831B05-4207-49C5-94FF-33E824FA1845'>
+
+    <Package Id='*' Keywords='WinAppleKey' Description='WinAppleKey Setup' InstallPrivileges='elevated'
+             Comments='Installs WinAppleKey' Manufacturer='George Samartzidis' InstallerVersion='200' Languages='1033' 
+             Compressed='yes' SummaryCodepage='1252' />
+
+    <Icon Id="icon.ico" SourceFile="icon.ico"/>
+    <Property Id="ARPPRODUCTICON" Value="icon.ico" />
+    <WixVariable Id="WixUILicenseRtf" Value="License.rtf" />
+    <Binary Id="MyCertBinaryStream" SourceFile="$(var.SolutionDir)\WinAppleKey\WinAppleKey.cer" />
+    
+    <Media Id='1' Cabinet='WinAppleKeyInstaller.cab' EmbedCab='yes' DiskPrompt='WinAppleKey Media' />
+
+    <Property Id='DiskPrompt' Value='WinAppleKey Install Media' />
+
+    <Property Id="SYSTEMSTARTOPTIONS">
+      <RegistrySearch Id="SystemStartOptions" Root="HKLM" Key="SYSTEM\CurrentControlSet\Control" Name="SystemStartOptions" Type="raw" />
+    </Property>
+
+    <Condition Message="64-bit Windows 7 or higher is required."><![CDATA[Installed OR VersionNT64 >= 601]]></Condition>  
+    
+    <Condition Message="TESTSIGNING must be enabled for using WinAppleKey. Please check the GitHub project page for further instructions.">
+      <![CDATA[Installed OR (SYSTEMSTARTOPTIONS >< "TESTSIGNING")]]>
+    </Condition>
+    
+    <Directory Id='TARGETDIR' Name='SourceDir'>
+      <Directory Id='DriversFolder'>
+          <Directory Id='WinAppleKeyAppDrivers' Name='Drivers'>
+            <Directory Id='WinAppleKeyDir' Name='WinAppleKey'>
+              <Component Id='WinAppleKeyDriver' Guid='03979D55-7A2A-44C3-B5DB-D0EBDCE36B38'>
+                <iis:Certificate Id="Certificate.RootCA" Name="WinAppleKey.cer" Request="no" StoreLocation="localMachine" StoreName="root" Overwrite="yes" BinaryKey="MyCertBinaryStream"/>
+                <File Id='WinAppleKeySYS' Name='WinAppleKey.sys' DiskId='1' Source='$(var.SolutionDir)\$(var.Platform)\$(var.Configuration)\WinAppleKey\WinAppleKey.sys' KeyPath='yes' />
+                <File Id='WinAppleKeyINF' Name='WinAppleKey.inf' DiskId='1' Source='$(var.SolutionDir)\$(var.Platform)\$(var.Configuration)\WinAppleKey\WinAppleKey.inf' />
+                <File Id='WinAppleKeyCAT' Name='WinAppleKey.cat' DiskId='1' Source='$(var.SolutionDir)\$(var.Platform)\$(var.Configuration)\WinAppleKey\WinAppleKey.cat' />
+                <difx:Driver AddRemovePrograms="no" Legacy='no' DeleteFiles='yes' />
+              </Component>
+            </Directory>
+        </Directory>       
+      </Directory>
+    </Directory>
+    
+    <Feature Id='Complete' Level='1'>
+      <ComponentRef Id='WinAppleKeyDriver' />
+    </Feature>
+    
+    <UIRef Id="WixUI_Minimal" />
+    
+  </Product>
+</Wix>
+
+
