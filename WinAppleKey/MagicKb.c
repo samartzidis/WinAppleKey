@@ -16,7 +16,7 @@ void ProcessMagicKbBlock(PBRB pbrb)
 	buf[2] &= ~HidLCtrlMask; //Clear LCtrl
 
 	//Process special key modifier
-	if (buf[10] != 0) 
+	if (buf[10]) 
 	{
 		if (buf[10] & 0x1) //Eject (translate to Del)
 			buf[4] = HidDel;
