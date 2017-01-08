@@ -77,7 +77,7 @@ Please also make sure that you understand all the potential **[implications](htt
       <th>Output Logical Key</th>
     </tr>
     <tr>
-      <td>Fn + Left Ctrl</td><td>Right Control</td>
+      <td>Fn + Left Ctrl</td><td>Right Ctrl</td>
     </tr>
     <tr>
       <td>Fn + Enter</td><td>Insert</td>
