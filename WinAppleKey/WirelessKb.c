@@ -1,5 +1,4 @@
 #include "driver.h"
-#include <Bthddi.h>
 
 static BOOLEAN FakeFnActive = 0;
 static UCHAR WirelessKbBuffer[10] = { 0 };
