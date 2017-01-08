@@ -1,7 +1,7 @@
 #include "driver.h"
 #include <Bthddi.h>
 
-static BOOLEAN FakeFnActive = 0;
+BOOLEAN FakeFnActive = 0;
 UCHAR WirelessKbBuffer[10];
 UCHAR SpecialKeyP4;
 UCHAR SpecialKeyP2;
