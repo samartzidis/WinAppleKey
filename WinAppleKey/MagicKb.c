@@ -1,6 +1,6 @@
 #include "driver.h"
 
-BOOLEAN FakeFnActive = 0;
+static BOOLEAN FakeFnActive = 0;
 
 void ProcessMagicKbBlock(PBRB pbrb)
 {

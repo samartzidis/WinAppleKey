@@ -1,10 +1,10 @@
 #include "driver.h"
 #include <Bthddi.h>
 
-BOOLEAN FakeFnActive = 0;
-UCHAR WirelessKbBuffer[10];
-UCHAR SpecialKeyP4;
-UCHAR SpecialKeyP2;
+static BOOLEAN FakeFnActive = 0;
+static UCHAR WirelessKbBuffer[10] = { 0 };
+static UCHAR SpecialKeyP4 = 0;
+static UCHAR SpecialKeyP2 = 0;
 
 void ProcessWirelessKbBlock(PBRB pbrb)
 {
