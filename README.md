@@ -86,10 +86,13 @@ Please also make sure that you understand all the potential **[implications](htt
       <td>Fn + Enter</td><td>Insert</td>
     </tr>
     <tr>
-      <td>Fn + B</td><td>Pause/Break</td>
+      <td>Fn + P</td><td>Print Screen</td>
     </tr>
     <tr>
-      <td>Fn + P</td><td>Print Screen</td>
+      <td>Fn + S</td><td>Scroll Lock</td>
+    </tr>
+    <tr>
+      <td>Fn + B</td><td>Pause/Break</td>
     </tr>
     <tr>
       <td>Fn + Up</td><td>Page Up</td>
