@@ -34,20 +34,26 @@ void ProcessWirelessKbBlock(PBRB pbrb)
 		//Process Fn+[any key] combination 
 		if (FakeFnActive && (buf[4] || buf[2]))
 		{
-			if (buf[4] == HidLeft)
-				WirelessKbBuffer[4] = HidHome;
-			else if (buf[4] == HidRight)
-				WirelessKbBuffer[4] = HidEnd;
-			else if (buf[4] == HidUp)
-				WirelessKbBuffer[4] = HidPgUp;
-			else if (buf[4] == HidDown)
-				WirelessKbBuffer[4] = HidPgDown;
-			else if (buf[4] == HidEnter)
-				WirelessKbBuffer[4] = HidInsert;
-			else if (buf[4] == HidF5)
-				WirelessKbBuffer[4] = HidPause;		
-			else if (buf[4] == HidF6)
-				WirelessKbBuffer[4] = HidPrtScr;
+			if (buf[4] == HidLeft) WirelessKbBuffer[4] = HidHome;
+			else if (buf[4] == HidRight) WirelessKbBuffer[4] = HidEnd;
+			else if (buf[4] == HidUp) WirelessKbBuffer[4] = HidPgUp;
+			else if (buf[4] == HidDown) WirelessKbBuffer[4] = HidPgDown;
+			else if (buf[4] == HidEnter) WirelessKbBuffer[4] = HidInsert;			
+			else if (buf[4] == HidF1) WirelessKbBuffer[4] = HidF13;
+			else if (buf[4] == HidF2) WirelessKbBuffer[4] = HidF14;
+			else if (buf[4] == HidF3) WirelessKbBuffer[4] = HidF15;
+			else if (buf[4] == HidF4) WirelessKbBuffer[4] = HidF16;
+			else if (buf[4] == HidF5) WirelessKbBuffer[4] = HidF17;
+			else if (buf[4] == HidF6) WirelessKbBuffer[4] = HidF18;
+			else if (buf[4] == HidF7) WirelessKbBuffer[4] = HidF19;
+			else if (buf[4] == HidF8) WirelessKbBuffer[4] = HidF20;
+			else if (buf[4] == HidF9) WirelessKbBuffer[4] = HidF21;
+			else if (buf[4] == HidF10) WirelessKbBuffer[4] = HidF22;
+			else if (buf[4] == HidF11) WirelessKbBuffer[4] = HidF23;
+			else if (buf[4] == HidF12) WirelessKbBuffer[4] = HidF24;
+			else if (buf[4] == HidKeyP) WirelessKbBuffer[4] = HidPrtScr;
+			else if (buf[4] == HidKeyB) WirelessKbBuffer[4] = HidPauseBreak;
+			else if (buf[4] == HidKeyS) WirelessKbBuffer[4] = HidScrLck;
 			else if (buf[2] & HidLCtrlMask)
 			{
 				buf[2] &= ~HidLCtrlMask; //Clear LCtrl
