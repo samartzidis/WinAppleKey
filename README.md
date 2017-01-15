@@ -77,16 +77,22 @@ Please also make sure that you understand all the potential **[implications](htt
       <th>Output Logical Key</th>
     </tr>
     <tr>
+      <td>Fn + [F1-F12]</td><td>[F13-F24]</td>
+    </tr>
+    <tr>
       <td>Fn + Left Ctrl</td><td>Right Ctrl</td>
     </tr>
     <tr>
       <td>Fn + Enter</td><td>Insert</td>
     </tr>
     <tr>
-      <td>Fn + F5</td><td>Pause/Break</td>
+      <td>Fn + P</td><td>Print Screen</td>
     </tr>
     <tr>
-      <td>Fn + F6</td><td>Print Screen</td>
+      <td>Fn + S</td><td>Scroll Lock</td>
+    </tr>
+    <tr>
+      <td>Fn + B</td><td>Pause/Break</td>
     </tr>
     <tr>
       <td>Fn + Up</td><td>Page Up</td>
