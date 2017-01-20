@@ -40,7 +40,7 @@ by issuing the command (in an Administrative command prompt):
 
 ``` Bcdedit.exe -set TESTSIGNING ON ```
 
-Before following this procedure, please make sure that you understand all the potential **[implications](https://msdn.microsoft.com/en-us/windows/hardware/drivers/install/the-testsigning-boot-configuration-option)** of running your system in TESTSIGNING mode before you proceed with the installation as well as the fact that WinAppleKey is ***free software*** that you are willing to build and use completely ***at your own risk.***
+Please make sure that you understand all the potential **[implications](https://msdn.microsoft.com/en-us/windows/hardware/drivers/install/the-testsigning-boot-configuration-option)** of running your system in TESTSIGNING mode before you proceed with the installation as well as the fact that WinAppleKey is ***free software*** that you are willing to build and use completely ***at your own risk.***
 
 To uninstall, you can use the uninstaller from the ```Control Panel``` ```Programs``` and then manually revert TESTSIGNING mode by issuing the command (in an Administrative command prompt):
 
