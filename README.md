@@ -33,7 +33,7 @@ as it does not expose any keyboard input data to user mode. It also only attache
 leaving the rest of your keyboard devices unaffected.
 
 
-### Please Note
+### Installation
 Due to the fact that the driver is signed with a self-signed test certificate, Windows does not allow the installation unless it is 
 running in **TESTSIGNING** mode. Therefore, to install the driver you have to first reboot your system in TESTSIGNING mode
 by issuing the command (in an Administrative command prompt): 
