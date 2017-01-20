@@ -107,6 +107,6 @@ To uninstall, you can use the uninstaller from the ```Control Panel``` ```Progra
 
 ### Build Instructions
 
-To build the binaries (driver and installer) you will need **Visual Studio 2015** along with an installation of the 
-  **Windows 10 Driver Kit (WDK)**. For building the installer project, you will also need to install the **[WiX toolset](http://wixtoolset.org/)** version v3.10.3
+To build the driver you will need **Visual Studio 2015** along with an installation of the 
+  **Windows 10 Driver Kit (WDK)**. For the installer project, you will additionally need to install the **[WiX toolset](http://wixtoolset.org/)** version v3.10.3
   or better. 
