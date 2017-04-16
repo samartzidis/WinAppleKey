@@ -105,6 +105,16 @@ To uninstall, you can use the uninstaller from the ```Control Panel``` ```Progra
     </tr>
   </table>
 
+### Driver (Registry) Settings
+
+You can use regedit.exe to optionally modify certain driver settings.
+
+To enable/disable the **Alt-Cmd key swapping** edit the DWORD key value: **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WinAppleKey\SwapAltCmd**. The default value is 0 (off).
+
+To enable/disable the **Fn-Ctrl key swapping** edit the DWORD key value:
+**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WinAppleKey\SwapFnCtrl**. The default value is 1 (on).
+
+
 ### Build Instructions
 
 To build the driver you will need **Visual Studio 2015** along with an installation of the 
