@@ -1,4 +1,4 @@
-; Installation inf for the WinAppleKey Apple Keyboard Driver
+; Installation inf for the WinAppleKey Driver
 ;
  
 [Version]
@@ -24,31 +24,58 @@ Keyboard_CoInstaller_CopyFiles = 11
 1=%KBDiskName%
 
 [SourceDisksFiles]
-WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll=1
+WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll = 1
 WinAppleKey.sys = 1,
 
 [Manufacturer]
-%Manufacturer%=USBKeyboard,NTamd64
+%Manufacturer% = USBKeyboard,NTamd64
 
 [USBKeyboard.NTamd64]
-%USBKeyboard.DevDesc%=Dri_BTH_Inst,BTHENUM\{00001124-0000-1000-8000-00805f9b34fb}_VID&0001004c_PID&0267
-%USBKeyboard.DevDesc%=Dri_BTH_Inst,BTHENUM\{00001124-0000-1000-8000-00805f9b34fb}_VID&000205ac_PID&0208
-%USBKeyboard.DevDesc%=Dri_BTH_Inst,BTHENUM\{00001124-0000-1000-8000-00805f9b34fb}_VID&000205ac_PID&0209
-%USBKeyboard.DevDesc%=Dri_BTH_Inst,BTHENUM\{00001124-0000-1000-8000-00805f9b34fb}_VID&000205ac_PID&020a
-%USBKeyboard.DevDesc%=Dri_BTH_Inst,BTHENUM\{00001124-0000-1000-8000-00805f9b34fb}_VID&000205ac_PID&022c
-%USBKeyboard.DevDesc%=Dri_BTH_Inst,BTHENUM\{00001124-0000-1000-8000-00805f9b34fb}_VID&000205ac_PID&022d
-%USBKeyboard.DevDesc%=Dri_BTH_Inst,BTHENUM\{00001124-0000-1000-8000-00805f9b34fb}_VID&000205ac_PID&022e
-%USBKeyboard.DevDesc%=Dri_BTH_Inst,BTHENUM\{00001124-0000-1000-8000-00805f9b34fb}_VID&000205ac_PID&0239
-%USBKeyboard.DevDesc%=Dri_BTH_Inst,BTHENUM\{00001124-0000-1000-8000-00805f9b34fb}_VID&000205ac_PID&023A
-%USBKeyboard.DevDesc%=Dri_BTH_Inst,BTHENUM\{00001124-0000-1000-8000-00805f9b34fb}_VID&000205ac_PID&023B
-%USBKeyboard.DevDesc%=Dri_BTH_Inst,BTHENUM\{00001124-0000-1000-8000-00805f9b34fb}_VID&000205ac_PID&0255
-%USBKeyboard.DevDesc%=Dri_BTH_Inst,BTHENUM\{00001124-0000-1000-8000-00805f9b34fb}_VID&000205ac_PID&0256
-%USBKeyboard.DevDesc%=Dri_BTH_Inst,BTHENUM\{00001124-0000-1000-8000-00805f9b34fb}_VID&000205ac_PID&0257
+%USBKeyboard.DevDesc% = Dri_BTH_Inst,BTHENUM\{00001124-0000-1000-8000-00805f9b34fb}_VID&000205ac_PID&0208
+%USBKeyboard.DevDesc% = Dri_BTH_Inst,BTHENUM\{00001124-0000-1000-8000-00805f9b34fb}_VID&000205ac_PID&0209
+%USBKeyboard.DevDesc% = Dri_BTH_Inst,BTHENUM\{00001124-0000-1000-8000-00805f9b34fb}_VID&000205ac_PID&020a
+%USBKeyboard.DevDesc% = Dri_BTH_Inst,BTHENUM\{00001124-0000-1000-8000-00805f9b34fb}_VID&000205ac_PID&022c
+%USBKeyboard.DevDesc% = Dri_BTH_Inst,BTHENUM\{00001124-0000-1000-8000-00805f9b34fb}_VID&000205ac_PID&022d
+%USBKeyboard.DevDesc% = Dri_BTH_Inst,BTHENUM\{00001124-0000-1000-8000-00805f9b34fb}_VID&000205ac_PID&022e
+%USBKeyboard.DevDesc% = Dri_BTH_Inst,BTHENUM\{00001124-0000-1000-8000-00805f9b34fb}_VID&000205ac_PID&0239
+%USBKeyboard.DevDesc% = Dri_BTH_Inst,BTHENUM\{00001124-0000-1000-8000-00805f9b34fb}_VID&000205ac_PID&023A
+%USBKeyboard.DevDesc% = Dri_BTH_Inst,BTHENUM\{00001124-0000-1000-8000-00805f9b34fb}_VID&000205ac_PID&023B
+%USBKeyboard.DevDesc% = Dri_BTH_Inst,BTHENUM\{00001124-0000-1000-8000-00805f9b34fb}_VID&000205ac_PID&0255
+%USBKeyboard.DevDesc% = Dri_BTH_Inst,BTHENUM\{00001124-0000-1000-8000-00805f9b34fb}_VID&000205ac_PID&0256
+%USBKeyboard.DevDesc% = Dri_BTH_Inst,BTHENUM\{00001124-0000-1000-8000-00805f9b34fb}_VID&000205ac_PID&0257
+%USBKeyboard.DevDesc% = Dri_BTH_Inst,BTHENUM\{00001124-0000-1000-8000-00805f9b34fb}_VID&0001004c_PID&0267
+%USBKeyboard.DevDesc% = Dri_HID_Inst,USB\VID_05AC&PID_0267&MI_01
 
+;=====================================================================
+
+[Dri_HID_Inst.NT]
+Include = Input.inf
+Needs = HID_Inst.NT
+Copyfiles = UKBMnt_Inst.CopyList
+
+[Dri_HID_Inst.NT.HW]
+AddReg = USBHIDKeyPadDevice.AddReg.NT
+
+[Dri_HID_Inst.NT.Services]
+Include = Input.inf
+Needs = HID_Inst.NT.Services
+AddService = WinAppleKey,,HIDKbFlt_Service_Inst
+
+[USBHIDKeyPadDevice.AddReg.NT]
+HKR,,"LowerFilters",0x00010000,"WinAppleKey"
+
+[Dri_HID_Inst.NT.CoInstallers]
+AddReg = Keyboard_CoInstaller_AddReg
+CopyFiles = Keyboard_CoInstaller_CopyFiles
+
+[Dri_HID_Inst.NT.Wdf]
+KmdfService = KeyMagic, keyboard_wdfsect
+
+;=====================================================================
 
 [Dri_BTH_Inst.NT]
-Include=hidbth.inf
-Needs=HIDBTH_Inst.NT
+Include = hidbth.inf
+Needs = HIDBTH_Inst.NT
 Copyfiles = UKBMnt_Inst.CopyList
 
 [UKBMnt_Inst.CopyList]
@@ -71,6 +98,8 @@ ServiceBinary = %12%\WinAppleKey.sys
 AddReg = HIDKbFlt_Service_AddReg
 
 [HIDKbFlt_Service_AddReg]
+HKR,,SwapAltCmd,%REG_DWORD%, 0
+HKR,,SwapFnCtrl,%REG_DWORD%, 1
 
 [Dri_BTH_Inst.NT.HW]
 Include = keyboard.inf
@@ -84,6 +113,8 @@ AddReg = Keyboard_CoInstaller_AddReg
 [Dri_BTH_Inst.NT.Wdf]
 KmdfService = WinAppleKey, keyboard_wdfsect
 
+;=====================================================================
+
 [Keyboard_CoInstaller_AddReg]
 HKR,,CoInstallers32,0x00010000,"WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll,WdfCoInstaller"
 
@@ -96,22 +127,22 @@ KmdfLibraryVersion = $KMDFVERSION$
 ;=====================================================================
 
 [strings]
-HID.ClassName="Human Interface Devices"
+HID.ClassName = "Human Interface Devices"
 
 SERVICE_KERNEL_DRIVER	= 1
-SERVICE_BOOT_START	= 0
+SERVICE_BOOT_START		= 0
 SERVICE_SYSTEM_START	= 1
-SERVICE_AUTO_START	= 2
+SERVICE_AUTO_START		= 2
 SERVICE_DEMAND_START	= 3
 SERVICE_ERROR_NORMAL	= 1
 SERVICE_ERROR_IGNORE	= 0
-REG_EXPAND_SZ		= 0x00020000
-REG_DWORD		= 0x00010001
-REG_SZ			= 0x00000000
+REG_EXPAND_SZ			= 0x00020000
+REG_DWORD				= 0x00010001
+REG_SZ					= 0x00000000
 
-Provider="-"
-Manufacturer="-"
+Provider = "-"
+Manufacturer = "-"
 
-USBKeyboard.DevDesc="WinAppleKey"
-HIDKbFlt.SvcDesc="WinAppleKey"
+USBKeyboard.DevDesc = "WinAppleKey"
+HIDKbFlt.SvcDesc = "WinAppleKey"
 KBDiskName = "WinAppleKey Install Disk"

@@ -27,10 +27,10 @@
     <ClCompile Include="Driver.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MagicKb.c">
+    <ClCompile Include="A1644.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="WirelessKb.c">
+    <ClCompile Include="A1314.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
