@@ -105,7 +105,7 @@ To uninstall, you can use the uninstaller from the ```Control Panel``` ```Progra
     </tr>
   </table>
 
-### Driver (Registry) Settings
+### Modifying Settings
 
 You can use regedit.exe to optionally modify certain driver settings.
 
@@ -114,6 +114,7 @@ To enable/disable the **Alt-Cmd key swapping** edit the DWORD key value: **HKEY_
 To enable/disable the **Fn-Ctrl key swapping** edit the DWORD key value:
 **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WinAppleKey\SwapFnCtrl**. The default value is 1 (on).
 
+After changing any of these values, you will need to disconnect/connect your associated Apple keyboard(s) to trigger a driver reload, or alternatively reboot your machine.
 
 ### Build Instructions
 
