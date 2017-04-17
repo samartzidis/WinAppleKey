@@ -105,7 +105,7 @@ To uninstall, you can use the uninstaller from the ```Control Panel``` ```Progra
     </tr>
   </table>
 
-### Modifying Settings
+### Driver Settings
 
 You can use regedit.exe to optionally modify certain driver settings.
 
