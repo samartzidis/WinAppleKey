@@ -116,6 +116,10 @@ To enable/disable the **Fn-Ctrl key swapping** edit the DWORD key value:
 
 After changing any of these values, you will need to disconnect/connect your associated Apple keyboard(s) to trigger a driver reload, or alternatively reboot your machine.
 
+### Downloading Binary Releases
+
+Go to the [releases](https://github.com/samartzidis/WinAppleKey/releases) page and get the latest release.
+
 ### Build Instructions
 
 To build the driver you will need **Visual Studio 2015** along with an installation of the 
