@@ -110,7 +110,7 @@ After changing any of these values, you will need to disconnect/connect your ass
 
 ### Downloading Binary Releases
 
-Go to the [releases](https://github.com/samartzidis/WinAppleKey/releases) page and get the latest release.
+Go to the [releases](https://github.com/samartzidis/WinAppleKey/releases) page and get the latest setup.msi installer release.
 
 ### Build Instructions
 
