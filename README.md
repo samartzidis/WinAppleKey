@@ -26,17 +26,21 @@ The older WinA1314 driver was not capable of that as it was implemented using *F
 
 
 ### Installation
-Due to the fact that the driver is signed with a self-signed test certificate, Windows does not allow the installation unless it is 
-running in **TESTSIGNING** mode. Therefore, to install the driver you have to first reboot your system in TESTSIGNING mode
-by issuing the following command (in an Administrative command prompt): 
+Due to the fact that the driver is signed with a self-signed test certificate, Windows will not allow the installation unless it is 
+running in **TESTSIGNING** mode. 
+
+Please make sure that you understand all the potential **[implications](https://msdn.microsoft.com/en-us/windows/hardware/drivers/install/the-testsigning-boot-configuration-option)** of running your system in TESTSIGNING mode as well as the fact that WinAppleKey is ***free software*** that you are willing to build and/or use completely ***at your own risk.***
+
+To set Windows in TESTSIGNING mode issue the below command in an Administrative command prompt and then reboot. Note that switching to TESTSIGNING mode will fail unless **Secure Boot** is set to disabled at your BIOS settings.
 
 ``` Bcdedit.exe -set TESTSIGNING ON ```
 
-Please make sure that you understand all the potential **[implications](https://msdn.microsoft.com/en-us/windows/hardware/drivers/install/the-testsigning-boot-configuration-option)** of running your system in TESTSIGNING mode before you proceed with the installation as well as the fact that WinAppleKey is ***free software*** that you are willing to build and use completely ***at your own risk.***
+You can then run the latest Setup.msi installer release from [releases](https://github.com/samartzidis/WinAppleKey/releases).
 
-To uninstall, you can use the uninstaller from the ```Control Panel``` ```Programs``` and then manually revert TESTSIGNING mode by issuing the following command (in an Administrative command prompt):
+To uninstall, run the uninstaller from the ```Control Panel``` ```Programs``` and then manually revert TESTSIGNING mode by issuing the following command (in an Administrative command prompt):
 
 ``` Bcdedit.exe -set TESTSIGNING OFF ```
+
 
 ### Key Mapppings
 
@@ -107,10 +111,6 @@ To enable/disable the **Fn-Ctrl key swapping** edit the DWORD key value:
 **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WinAppleKey\SwapFnCtrl**. The default value is 1 (on).
 
 After changing any of these values, you will need to disconnect/connect your associated Apple keyboard(s) to trigger a driver reload, or alternatively reboot your machine.
-
-### Downloading Binary Releases
-
-Go to the [releases](https://github.com/samartzidis/WinAppleKey/releases) page and get the latest setup.msi installer release.
 
 ### Build Instructions
 
