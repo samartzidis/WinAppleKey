@@ -82,15 +82,15 @@ void ProcessA1314Block(PBRB pBrb)
 			else if (TmpBuf[4] == HidF4) TmpBuf[4] = HidF16;
 			else if (TmpBuf[4] == HidF5) TmpBuf[4] = HidF17;
 			else if (TmpBuf[4] == HidF6) TmpBuf[4] = HidF18;
-			else if (TmpBuf[4] == HidF7) TmpBuf[4] = HidF19;
-			else if (TmpBuf[4] == HidF8) TmpBuf[4] = HidF20;
-			else if (TmpBuf[4] == HidF9) TmpBuf[4] = HidF21;
-			else if (TmpBuf[4] == HidF10) TmpBuf[4] = HidF22;
-			else if (TmpBuf[4] == HidF11) TmpBuf[4] = HidF23;
-			else if (TmpBuf[4] == HidF12) TmpBuf[4] = HidF24;
-			else if (TmpBuf[4] == HidKeyP) TmpBuf[4] = HidPrtScr;
-			else if (TmpBuf[4] == HidKeyB) TmpBuf[4] = HidPauseBreak;
-			else if (TmpBuf[4] == HidKeyS) TmpBuf[4] = HidScrLck;
+			else if (TmpBuf[4] == HidF7) TmpBuf[4] = 0xB4; //Back
+			else if (TmpBuf[4] == HidF8) TmpBuf[4] = 0xCD; //Pause/Play
+			else if (TmpBuf[4] == HidF9) TmpBuf[4] = 0xB5; //Forward
+			else if (TmpBuf[4] == HidF10) TmpBuf[4] = 0x7F; //Mute
+			else if (TmpBuf[4] == HidF11) TmpBuf[4] = 0x81; //Quieter
+			else if (TmpBuf[4] == HidF12) TmpBuf[4] = 0x80; //Louder
+			//else if (TmpBuf[4] == HidKeyP) TmpBuf[4] = HidPrtScr;
+			//else if (TmpBuf[4] == HidKeyB) TmpBuf[4] = HidPauseBreak;
+			//else if (TmpBuf[4] == HidKeyS) TmpBuf[4] = HidScrLck;
 			else if (TmpBuf[2] & HidLCtrlMask) //Map Fn+LCtrl to RCtrl
 			{
 				TmpBuf[2] &= ~HidLCtrlMask; //Clear LCtrl
