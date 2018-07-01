@@ -1,3 +1,5 @@
+[![paypal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TBM5P9X6GZRCL)
+
 # WinAppleKey
 Apple Keyboard (model A1314 and A1644) Driver for Windows 10.
 
@@ -117,3 +119,5 @@ After changing any of these values, you will need to disconnect/connect your ass
 To build the driver you will need **Visual Studio 2015** along with an installation of the 
   **Windows 10 Driver Kit (WDK)**. For the installer project, you will additionally need to install the **[WiX toolset](http://wixtoolset.org/)** version v3.10.3
   or better. 
+
+
