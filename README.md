@@ -116,7 +116,7 @@ After changing any of these values, you will need to disconnect/connect your ass
 
 ### Build Instructions
 
-To build the driver you will need **Visual Studio 2015** along with an installation of the 
+To build the driver you will need **Visual Studio 2017** along with an installation of the 
   **Windows 10 Driver Kit (WDK)**. For the installer project, you will additionally need to install the **[WiX toolset](http://wixtoolset.org/)** version v3.10.3
   or better. 
 
