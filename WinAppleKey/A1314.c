@@ -71,33 +71,38 @@ void ProcessA1314Block(PBRB pBrb)
 		//Process Fn+[key] combination 
 		if (FakeFnActive && (TmpBuf[4] || TmpBuf[2]))
 		{
-			if (TmpBuf[4] == HidLeft) TmpBuf[4] = HidHome;
-			else if (TmpBuf[4] == HidRight) TmpBuf[4] = HidEnd;
-			else if (TmpBuf[4] == HidUp) TmpBuf[4] = HidPgUp;
-			else if (TmpBuf[4] == HidDown) TmpBuf[4] = HidPgDown;
-			else if (TmpBuf[4] == HidEnter) TmpBuf[4] = HidInsert;			
-			else if (TmpBuf[4] == HidF1) TmpBuf[4] = HidF13;
-			else if (TmpBuf[4] == HidF2) TmpBuf[4] = HidF14;
-			else if (TmpBuf[4] == HidF3) TmpBuf[4] = HidF15;
-			else if (TmpBuf[4] == HidF4) TmpBuf[4] = HidF16;
-			else if (TmpBuf[4] == HidF5) TmpBuf[4] = HidF17;
-			else if (TmpBuf[4] == HidF6) TmpBuf[4] = HidF18;
-			else if (TmpBuf[4] == HidF7) TmpBuf[4] = HidF19;
-			else if (TmpBuf[4] == HidF8) TmpBuf[4] = HidF20;
-			else if (TmpBuf[4] == HidF9) TmpBuf[4] = HidF21;
-			else if (TmpBuf[4] == HidF10) TmpBuf[4] = HidF22;
-			else if (TmpBuf[4] == HidF11) TmpBuf[4] = HidF23;
-			else if (TmpBuf[4] == HidF12) TmpBuf[4] = HidF24;
-			else if (TmpBuf[4] == HidKeyP) TmpBuf[4] = HidPrtScr;
-			else if (TmpBuf[4] == HidKeyB) TmpBuf[4] = HidPauseBreak;
-			else if (TmpBuf[4] == HidKeyS) TmpBuf[4] = HidScrLck;
-			else if (TmpBuf[2] & HidLCtrlMask) //Map Fn+LCtrl to RCtrl
+			switch (TmpBuf[4])
 			{
-				TmpBuf[2] &= ~HidLCtrlMask; //Clear LCtrl
-				TmpBuf[2] |= HidRCtrlMask; //Set RCtrl
+				case HidLeft: TmpBuf[4] = HidHome; break;
+				case HidRight: TmpBuf[4] = HidEnd; break;
+				case HidUp: TmpBuf[4] = HidPgUp; break;
+				case HidDown: TmpBuf[4] = HidPgDown; break;
+				case HidEnter: TmpBuf[4] = HidInsert; break;
+				case HidF1: TmpBuf[4] = HidF13; break;
+				case HidF2: TmpBuf[4] = HidF14; break;
+				case HidF3: TmpBuf[4] = HidF15; break;
+				case HidF4: TmpBuf[4] = HidF16; break;
+				case HidF5: TmpBuf[4] = HidF17; break;
+				case HidF6: TmpBuf[4] = HidF18; break;
+				case HidF7: TmpBuf[4] = HidF19; break;
+				case HidF8: TmpBuf[4] = HidF20; break;
+				case HidF9: TmpBuf[4] = HidF21; break;
+				case HidF10: TmpBuf[4] = HidF22; break;
+				case HidF11: TmpBuf[4] = HidF23; break;
+				case HidF12: TmpBuf[4] = HidF24; break;
+				case HidKeyP: TmpBuf[4] = HidPrtScr; break;
+				case HidKeyB: TmpBuf[4] = HidPauseBreak; break;
+				case HidKeyS: TmpBuf[4] = HidScrLck; break;
+				default:
+					if (TmpBuf[2] & HidLCtrlMask) //Map Fn+LCtrl to RCtrl
+					{
+						TmpBuf[2] &= ~HidLCtrlMask; //Clear LCtrl
+						TmpBuf[2] |= HidRCtrlMask; //Set RCtrl
+					}
+					else
+						RtlZeroMemory(TmpBuf + 2, pBrb->BrbL2caAclTransfer.BufferSize - 2); //Ignore all other Fn+[key] combinations
+					break;
 			}
-			else
-				RtlZeroMemory(TmpBuf + 2, pBrb->BrbL2caAclTransfer.BufferSize - 2); //Ignore all other Fn+[key] combinations
 		}
 	}
 

@@ -14,11 +14,9 @@
     <Property Id="ARPPRODUCTICON" Value="icon.ico" />
     <WixVariable Id="WixUILicenseRtf" Value="License.rtf" />
     <Binary Id="MyCertBinaryStream" SourceFile="$(var.SolutionDir)\WinAppleKey\WinAppleKey.cer" />
-    
     <Media Id='1' Cabinet='WinAppleKeyInstaller.cab' EmbedCab='yes' DiskPrompt='WinAppleKey Media' />
-
+    <Property Id="ARPNOREPAIR" Value="yes" Secure="yes" />    
     <Property Id='DiskPrompt' Value='WinAppleKey Install Media' />
-
     <Property Id="SYSTEMSTARTOPTIONS">
       <RegistrySearch Id="SystemStartOptions" Root="HKLM" Key="SYSTEM\CurrentControlSet\Control" Name="SystemStartOptions" Type="raw" />
     </Property>

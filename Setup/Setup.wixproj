@@ -52,9 +52,6 @@
       <Name>difxapp_x64</Name>
     </WixLibrary>
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Setup.wax" />
-  </ItemGroup>
   <Import Project="$(WixTargetsPath)" />
   <!--
 	To modify your build process, add your task inside one of the targets below and uncomment it.
