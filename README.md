@@ -33,11 +33,11 @@ running in **TESTSIGNING** mode.
 
 Please make sure that you understand all the potential **[implications](https://msdn.microsoft.com/en-us/windows/hardware/drivers/install/the-testsigning-boot-configuration-option)** of running your system in TESTSIGNING mode as well as the fact that WinAppleKey is ***free software*** that you are willing to build and/or use completely ***at your own risk.***
 
-To set Windows in TESTSIGNING mode issue the following command in an Administrative command prompt and then reboot. Note that switching to TESTSIGNING mode will fail unless **Secure Boot** is off in your BIOS settings.
+To set Windows in TESTSIGNING mode you will need to issue the below command in an Administrative command prompt and then reboot. Note that switching to TESTSIGNING mode will fail with an error message if you are running Windows on UEFI BIOS, unless **Secure Boot** is turned off. In that case, you will need to reboot into your BIOS first and disable Secure Boot.
 
 ``` Bcdedit.exe -set TESTSIGNING ON ```
 
-You can then run the latest Setup.msi installer release from [releases](https://github.com/samartzidis/WinAppleKey/releases).
+You can now run the latest Setup.msi installer release from [releases](https://github.com/samartzidis/WinAppleKey/releases).
 
 To uninstall, run the uninstaller from the ```Control Panel``` ```Programs``` and then manually revert TESTSIGNING mode by issuing the following command (in an Administrative command prompt):
 
