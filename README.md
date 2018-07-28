@@ -1,5 +1,3 @@
-[![paypal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TBM5P9X6GZRCL)
-
 # WinAppleKey
 Apple Keyboard (model A1314 and A1644) Driver for Windows 10.
 
