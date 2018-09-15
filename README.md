@@ -19,11 +19,9 @@ WinAppleKey is fully implemented as a HIDCLASS LowerFilter WDM kernel mode drive
 
 ![keyboard-driver-stack](keyboard-driver-stack.png)
 
-Sitting inbetween HIDCLASS and the bluetooth HID Transport driver; allows the interpretation of the input data 
+Sitting between HIDCLASS and the bluetooth HID Transport driver; allows the interpretation of the input data 
 before they reach HIDCLASS and get split out into TLC interfaces as HID Hot Buttons or as KBDClass (normal keys) input. 
 This allows full and proper re-mapping of all of the keys (incl. Fn, Eject), by also respecting typematic properties. 
-The older WinA1314 driver was not capable of that as it was implemented using *Francisco Lopes*'s [Interception](http://www.oblita.com/interception.html) driver, which is an UpperLevel filter KBDClass class driver. As a completely kernel-mode based implementation, it is also more secure than WinA1314 as it does not expose any keyboard input data to user mode. It also only attaches to the targeted keyboard device leaving the rest of your keyboard devices unaffected.
-
 
 ### Installation
 Due to the fact that the driver is signed with a self-signed test certificate, Windows will not allow the installation unless it is 
