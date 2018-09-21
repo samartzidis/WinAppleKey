@@ -24,9 +24,9 @@ This allows full and proper re-mapping of all of the keys (incl. Fn, Eject), by 
 
 ### Installation
 
-DISCLAIMER: This driver is signed with a self-signed (test/development) certificate. For that reason, Windows will not directly allow the driver installation unless they are running in **TESTSIGNING** mode. Please be aware that permanently running Windows in **TESTSIGNING** mode leaves your system open to various security risks; so please be aware of what you are doing as any consequence because of this is solely your responsibility. WinAppleKey is ***free software*** that you are willing to build and/or use completely ***at your own risk.***
+**DISCLAIMER:** This driver is signed with a self-signed (test/development) certificate. For that reason, Windows will not directly allow the driver installation unless they are running in **TESTSIGNING** mode. Please be aware that permanently running Windows in **TESTSIGNING** mode leaves your system open to various security risks; so please be aware of what you are doing as any consequence because of this is solely your responsibility. WinAppleKey is ***free software*** that you are willing to build and/or use completely ***at your own risk.***
 
-NOTE: If your system is running a UEFI BIOS, you will need to disable **Secure Boot** through your BIOS options before you switch Windows to **TESTSIGNING** mode.
+**NOTE:** If your system is running a UEFI BIOS, you will need to disable **Secure Boot** through your BIOS options before you switch Windows to **TESTSIGNING** mode.
 
 To switch to **TESTSIGNING** mode issue the following command (in an Administrative command prompt) and then reboot: 
 
