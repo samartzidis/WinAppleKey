@@ -10,13 +10,11 @@ under a native 64-bit **Windows 10** installation. No other drivers (such as App
 Specifically: 
 - Swaps the Fn-Ctrl keys to align with standard Windows keyboard layouts (not supported by Apple's Bootcamp driver).
 - Maps the missing Windows keys such as the Del, Insert, Print Screen, Pause/Break, etc.
-- Respects all the small details such as typematic properties of keys, something which was not possible with the older [WinA1314](https://github.com/samartzidis/WinA1314) driver.
-- Includes an installer that automates the task of properly and cleanly installing or uninstalling the driver.
 
-Only 64-bit versions of Windows 10 are currently supported. You may also be able to install the driver on Windows 7, 8 or 8.1 (64-bit) but this has not been tested.
+Note that it is only tested and supported on Windows 10 (64-bit).
 
 ### Technical Details
-WinAppleKey is fully implemented as a HIDCLASS LowerFilter WDM kernel mode driver. 
+WinAppleKey is implemented as a HIDCLASS LowerFilter WDM kernel mode driver. 
 
 ![keyboard-driver-stack](keyboard-driver-stack.png)
 
@@ -25,12 +23,12 @@ before they reach HIDCLASS and get split out into TLC interfaces as HID Hot Butt
 This allows full and proper re-mapping of all of the keys (incl. Fn, Eject), by also respecting typematic properties. 
 
 ### Installation
-Due to the fact that the driver is signed with a self-signed test certificate, Windows will not allow the installation unless it is 
-running in **TESTSIGNING** mode. 
 
-Please make sure that you understand all the potential **[implications](https://msdn.microsoft.com/en-us/windows/hardware/drivers/install/the-testsigning-boot-configuration-option)** of running your system in TESTSIGNING mode as well as the fact that WinAppleKey is ***free software*** that you are willing to build and/or use completely ***at your own risk.***
+DISCLAIMER: This driver is signed with a self-signed (test/development) certificate. For that reason, Windows will not directly allow the driver installation unless they are running in **TESTSIGNING** mode. Please be aware that permanently running Windows in **TESTSIGNING** mode leaves your system open to various security risks; so please be aware of what you are doing as any consequence because of this is solely your responsibility. WinAppleKey is ***free software*** that you are willing to build and/or use completely ***at your own risk.***
 
-To set Windows in TESTSIGNING mode you will need to issue the below command in an Administrative command prompt and then reboot. Note that switching to TESTSIGNING mode will fail with an error message if you are running Windows on UEFI BIOS, unless **Secure Boot** is turned off. In that case, you will need to reboot into your BIOS first and disable Secure Boot.
+NOTE: If your system is running a UEFI BIOS, you will need to disable **Secure Boot** through your BIOS options before you switch Windows to **TESTSIGNING** mode.
+
+To switch to **TESTSIGNING** mode issue the following command (in an Administrative command prompt) and then reboot: 
 
 ``` Bcdedit.exe -set TESTSIGNING ON ```
 
