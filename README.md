@@ -2,8 +2,6 @@
 
 Apple Keyboard (model A1314 and A1644) Driver for Windows 10.
 
-![keyboards](keyboards.png)
-
 WinAppleKey enables the use of the **Apple Wireless Keyboard (A1314)** and the **Apple Magic Keyboard (A1644)**
 under a native 64-bit **Windows 10** installation. No other drivers (such as Apple's Bootcamp) are needed.
 
