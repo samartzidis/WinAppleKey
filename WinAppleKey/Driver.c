@@ -251,6 +251,7 @@ NTSTATUS DispatchAny(IN PDEVICE_OBJECT fido, IN PIRP irp)
 	return status;
 }
 
+
 NTSTATUS InternalIoctlComplete(IN PDEVICE_OBJECT fido, IN PIRP irp, IN PVOID context)
 {
 	DebugPrint("InternalIoctlComplete()\n");
@@ -261,20 +262,16 @@ NTSTATUS InternalIoctlComplete(IN PDEVICE_OBJECT fido, IN PIRP irp, IN PVOID con
 		ULONG dwControlCode = irpSp->Parameters.DeviceIoControl.IoControlCode;
 		if (dwControlCode == IOCTL_INTERNAL_BTH_SUBMIT_BRB)
 		{
-			PBRB pbrb = (PBRB)irpSp->Parameters.Others.Argument1;
+			PBRB pbrb = (PBRB)irpSp->Parameters.Others.Argument1;			
+
 			if (pbrb->BrbHeader.Type == BRB_L2CA_ACL_TRANSFER)
 			{
 				BYTE* buf = (BYTE*)pbrb->BrbL2caAclTransfer.Buffer;
 				ULONG size = pbrb->BrbL2caAclTransfer.BufferSize;
 				DebugPrint("InternalIoctlComplete BRB_L2CA_ACL_TRANSFER: Buffer = 0x%x, BufferSize = %lu\n", buf, size);
-				
-				if (buf)
-				{
-					if (size == 3 || size == 10) //WirelessKeyboard
-						ProcessA1314Block(pbrb);
-					else if (size == 11) //MagicKeyboard 
-						ProcessA1644Buffer(buf + 2, 9);
-				}
+
+				if (buf && size == 11)
+					ProcessA1644Buffer(buf + 2, 9);
 			}
 		}
 		else if (dwControlCode == IOCTL_INTERNAL_USB_SUBMIT_URB)

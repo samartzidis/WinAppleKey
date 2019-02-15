@@ -1,17 +1,19 @@
 # WinAppleKey
 
-Apple Keyboard Driver (models A1314 and A1644 exclusively) for Windows 10.
+Apple Magic Keyboard Driver (model A1644) for Windows 10.
+No other drivers (such as Apple's Bootcamp) are needed or should be instaled.
 
-WinAppleKey enables the use of the **Apple Wireless Keyboard (A1314)** and the **Apple Magic Keyboard (A1644)**
-under a native 64-bit **Windows 10** installation. No other drivers (such as Apple's Bootcamp) are needed.
-
-Specifically: 
-- Swaps the Fn-Ctrl keys to align with standard Windows keyboard layouts (not supported by Apple's Bootcamp driver).
+Supported Feafures: 
+- Swaps the Fn-Ctrl keys to align with standard Windows keyboard layouts (fearture not supported by Apple's Bootcamp driver).
 - Maps the missing Windows keys such as the Del, Insert, Print Screen, Pause/Break, etc.
 
-Note that it is only tested and supported on Windows 10 (64-bit).
+Missing Fearures:
+- Multimedia keys.
+
+Note that WinAppleKey is only tested and supported on Windows 10 (64-bit).
 
 ### Technical Details
+
 WinAppleKey is implemented as a HIDCLASS LowerFilter WDM kernel mode driver. 
 
 ![keyboard-driver-stack](keyboard-driver-stack.png)

@@ -30,9 +30,6 @@
     <ClCompile Include="A1644.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="A1314.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Driver.h">

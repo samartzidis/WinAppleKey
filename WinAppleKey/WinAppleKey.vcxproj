@@ -96,7 +96,6 @@
   <ItemGroup>
     <ClCompile Include="Driver.c" />
     <ClCompile Include="A1644.c" />
-    <ClCompile Include="A1314.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Driver.h" />

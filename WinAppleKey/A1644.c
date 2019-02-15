@@ -1,6 +1,6 @@
 #include "driver.h"
 
-static BOOLEAN FakeFnActive = 0;
+BOOLEAN g_FakeFnActive = 0;
 
 void ProcessA1644Buffer(BYTE* buf, ULONG size)
 {
@@ -14,9 +14,9 @@ void ProcessA1644Buffer(BYTE* buf, ULONG size)
 	{
 		//Process LCtrl modifier and translate to FakeFn key
 		if ((*pModifier & 0x1) && !*pKey1)
-			FakeFnActive = TRUE;
+			g_FakeFnActive = TRUE;
 		else if (!*pKey1)
-			FakeFnActive = FALSE;
+			g_FakeFnActive = FALSE;
 
 		*pModifier &= ~HidLCtrlMask; //Clear LCtrl modifier
 	}
@@ -34,7 +34,7 @@ void ProcessA1644Buffer(BYTE* buf, ULONG size)
 				*pModifier |= HidLCtrlMask; //Set LCtrl modifier
 		}
 		else
-			FakeFnActive = *pSpecialKey & 0x2; //Set fake Fn state based on special key state
+			g_FakeFnActive = *pSpecialKey & 0x2; //Set fake Fn state based on special key state
 
 		*pSpecialKey = 0; //Clear special key so that the buffer can be understood by hidclass up the stack	
 	}
@@ -66,7 +66,7 @@ void ProcessA1644Buffer(BYTE* buf, ULONG size)
 	}
 
 	//Process Fn+[key] combination 
-	if (FakeFnActive && (*pKey1 || *pModifier))
+	if (g_FakeFnActive && (*pKey1 || *pModifier))
 	{
 		switch (*pKey1)
 		{
