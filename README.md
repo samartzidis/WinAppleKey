@@ -30,13 +30,13 @@ This allows full and proper re-mapping of all of the keys (incl. Fn, Eject), by 
 
 To switch to **TESTSIGNING** mode issue the following command (in an Administrative command prompt) and then reboot: 
 
-``` Bcdedit.exe -set TESTSIGNING ON ```
+``` bcdedit.exe -set TESTSIGNING ON ```
 
-You can now run the latest Setup.msi installer release from [releases](https://github.com/samartzidis/WinAppleKey/releases).
+You can now run the Setup.msi installer.
 
 To uninstall, run the uninstaller from the ```Control Panel``` ```Programs``` and then manually revert TESTSIGNING mode by issuing the following command (in an Administrative command prompt):
 
-``` Bcdedit.exe -set TESTSIGNING OFF ```
+``` bcdedit.exe -set TESTSIGNING OFF ```
 
 
 ### Key Mapppings
@@ -112,7 +112,7 @@ After changing any of these values, you will need to disconnect/connect your ass
 ### Build Instructions
 
 To build the driver you will need **Visual Studio 2017** along with an installation of the 
-  **Windows 10 Driver Kit (WDK)**. For the installer project, you will additionally need to install the **[WiX toolset](http://wixtoolset.org/)** version v3.10.3
+  **Windows 10 Driver Kit (WDK)**. For the installer project, you will additionally need to install the **[WiX toolset](http://wixtoolset.org/)** version v3.11
   or better. 
 
 [![donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TBM5P9X6GZRCL)
