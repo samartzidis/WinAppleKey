@@ -1,5 +1,4 @@
 ; Installation inf for the WinAppleKey Driver
-;
  
 [Version]
 Signature="$WINDOWS NT$"
@@ -9,7 +8,7 @@ Provider=%Provider%
 CatalogFile=WinAppleKey.cat
 DriverPackageDisplayName="WinAppleKey"
 DriverPackageType=PlugAndPlay
-DriverVer=02/15/2019,1.0.5.0
+DriverVer=04/22/2019,1.0.6.0
 
 [ControlFlags]
 ExcludeFromSelect = *
@@ -52,12 +51,12 @@ AddService = WinAppleKey,,HIDKbFlt_Service_Inst
 [USBHIDKeyPadDevice.AddReg.NT]
 HKR,,"LowerFilters",0x00010000,"WinAppleKey"
 
-[Dri_HID_Inst.NT.CoInstallers]
-AddReg = Keyboard_CoInstaller_AddReg
-CopyFiles = Keyboard_CoInstaller_CopyFiles
+;[Dri_HID_Inst.NT.CoInstallers]
+;AddReg = Keyboard_CoInstaller_AddReg
+;CopyFiles = Keyboard_CoInstaller_CopyFiles
 
 [Dri_HID_Inst.NT.Wdf]
-KmdfService = KeyMagic, keyboard_wdfsect
+KmdfService = WinAppleKey, keyboard_wdfsect
 
 ;=====================================================================
 
@@ -94,20 +93,20 @@ Include = keyboard.inf
 Needs	= HID_Keyboard_Inst.NT.HW
 AddReg  = Dri_BTH_Inst.NT.HW.AddReg
 
-[Dri_BTH_Inst.NT.CoInstallers]
-CopyFiles = Keyboard_CoInstaller_CopyFiles
-AddReg = Keyboard_CoInstaller_AddReg
+;[Dri_BTH_Inst.NT.CoInstallers]
+;CopyFiles = Keyboard_CoInstaller_CopyFiles
+;AddReg = Keyboard_CoInstaller_AddReg
 
 [Dri_BTH_Inst.NT.Wdf]
 KmdfService = WinAppleKey, keyboard_wdfsect
 
 ;=====================================================================
 
-[Keyboard_CoInstaller_AddReg]
-HKR,,CoInstallers32,0x00010000,"WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll,WdfCoInstaller"
+;[Keyboard_CoInstaller_AddReg]
+;HKR,,CoInstallers32,0x00010000,"WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll,WdfCoInstaller"
 
-[Keyboard_CoInstaller_CopyFiles]
-WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll
+;[Keyboard_CoInstaller_CopyFiles]
+;WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll
 
 [keyboard_wdfsect]
 KmdfLibraryVersion = $KMDFVERSION$

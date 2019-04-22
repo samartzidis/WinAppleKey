@@ -3,6 +3,7 @@
 <Wix xmlns='http://schemas.microsoft.com/wix/2006/wi'
      xmlns:difx='http://schemas.microsoft.com/wix/DifxAppExtension'
      xmlns:iis='http://schemas.microsoft.com/wix/IIsExtension'>
+
   <Product Name='WinAppleKey $(var.Version)' Id='FF0F05EE-71DE-4377-ABAF-8941B725FD2E' Language='1033' Codepage='1252' 
            Version='$(var.Version)' Manufacturer='George Samartzidis' UpgradeCode='74831B05-4207-49C5-94FF-33E824FA1845'>
 
@@ -14,7 +15,9 @@
     <Property Id="ARPPRODUCTICON" Value="icon.ico" />
     <WixVariable Id="WixUILicenseRtf" Value="License.rtf" />
     <Binary Id="MyCertBinaryStream" SourceFile="$(var.SolutionDir)\WinAppleKey\WinAppleKey.cer" />
+
     <Media Id='1' Cabinet='WinAppleKeyInstaller.cab' EmbedCab='yes' DiskPrompt='WinAppleKey Media' />
+
     <Property Id="ARPNOREPAIR" Value="yes" Secure="yes" />    
     <Property Id='DiskPrompt' Value='WinAppleKey Install Media' />
     <Property Id="SYSTEMSTARTOPTIONS">

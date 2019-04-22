@@ -48,7 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <WixLibrary Include="difxapp_x64">
-      <HintPath>..\..\..\Program Files (x86)\WiX Toolset v3.10\bin\difxapp_x64.wixlib</HintPath>
+      <HintPath>..\..\..\..\Program Files (x86)\WiX Toolset v3.11\bin\difxapp_x64.wixlib</HintPath>
       <Name>difxapp_x64</Name>
     </WixLibrary>
   </ItemGroup>
