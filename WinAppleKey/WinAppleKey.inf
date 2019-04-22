@@ -30,8 +30,20 @@ WinAppleKey.sys = 1,
 %Manufacturer% = USBKeyboard,NTamd64
 
 [USBKeyboard.NTamd64]
-%USBKeyboard.DevDesc% = Dri_BTH_Inst,BTHENUM\{00001124-0000-1000-8000-00805f9b34fb}_VID&0001004c_PID&0267
+;Magic Keyboard A1644
 %USBKeyboard.DevDesc% = Dri_HID_Inst,USB\VID_05AC&PID_0267&MI_01
+%USBKeyboard.DevDesc% = Dri_BTH_Inst,BTHENUM\{00001124-0000-1000-8000-00805f9b34fb}_VID&0001004c_PID&0267
+;Magic Keyboard with Numeric Keypad
+;%USBKeyboard.DevDesc%=Dri_HID_Inst,USB\VID_05AC&PID_026C&MI_01
+;%USBKeyboard.DevDesc%=Dri_BTH_Inst,BTHENUM\{00001124-0000-1000-8000-00805f9b34fb}_VID&0001004c_PID&026C
+;Internal Keyboard/Trackpad
+;%USBKeyboard.DevDesc%=Dri_HID_Inst,USB\VID_05AC&PID_0273&MI_01
+;Apple Internal Keyboard/Trackpad
+;%USBKeyboard.DevDesc%=Dri_HID_Inst,USB\VID_05AC&PID_0274&MI_01
+;Apple Internal Keyboard/Trackpad
+;%USBKeyboard.DevDesc%=Dri_HID_Inst,USB\VID_05AC&PID_0290&MI_01
+;Apple Internal Keyboard/Trackpad
+;%USBKeyboard.DevDesc%=Dri_HID_Inst,USB\VID_05AC&PID_0291&MI_01
 
 ;=====================================================================
 
