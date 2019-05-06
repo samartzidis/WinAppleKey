@@ -96,7 +96,7 @@ To uninstall, run the uninstaller from the ```Control Panel``` ```Programs``` an
   </table>
 
 Multimedia Keys:
-The multimedia keys are not directly mapped as they correspond to f19-F24 instead but you can easily use an [AutoHotkey script](MapMultimediaKeys.ahk).
+The multimedia keys are not directly mapped as they correspond to F19-F24 instead but you can easily use this [AutoHotkey script](MapMultimediaKeys.ahk) for that purpose.
 
 ### Driver Settings
 
