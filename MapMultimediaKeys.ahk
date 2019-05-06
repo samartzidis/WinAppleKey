@@ -1,3 +1,7 @@
+;
+; AutoHotkey script (https://www.autohotkey.com/) for mapping the normally F19-F24 keys to multimedia keys.
+;
+
 #NoEnv
 #NoTrayIcon
 #SingleInstance
