@@ -7,9 +7,6 @@ Supported Feafures:
 - Swaps the Fn-Ctrl keys to align with standard Windows keyboard layouts (fearture not supported by Apple's Bootcamp driver).
 - Maps the missing Windows keys such as the Del, Insert, Print Screen, Pause/Break, etc.
 
-Missing Fearures:
-- Multimedia keys.
-
 Note that WinAppleKey is only tested and supported on Windows 10 (64-bit).
 
 ### Technical Details
@@ -97,6 +94,9 @@ To uninstall, run the uninstaller from the ```Control Panel``` ```Programs``` an
       <td>Fn + Right</td><td>End</td>
     </tr>
   </table>
+
+Multimedia Keys:
+The multimedia keys are not directly mapped as they correspond to f19-F24 instead but you can easily use an ![AutoHotkey script](MapMultimediaKeys.ahk).
 
 ### Driver Settings
 
