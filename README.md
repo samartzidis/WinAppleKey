@@ -15,10 +15,6 @@ WinAppleKey is implemented as a HIDCLASS LowerFilter WDM kernel mode driver.
 
 ![keyboard-driver-stack](keyboard-driver-stack.png)
 
-Sitting between HIDCLASS and the bluetooth HID Transport driver; allows the interpretation of the input data 
-before they reach HIDCLASS and get split out into TLC interfaces as HID Hot Buttons or as KBDClass (normal keys) input. 
-This allows full and proper re-mapping of all of the keys (incl. Fn, Eject), by also respecting typematic properties. 
-
 ### Installation
 
 **DISCLAIMER:** This driver is signed with a self-signed (test/development) certificate. For that reason, Windows will not directly allow the driver installation unless in **TESTSIGNING** mode. Please be aware that permanently running Windows in **TESTSIGNING** mode leaves your system open to various security risks; so please be aware of what you are doing as any consequence because of this is solely your responsibility. WinAppleKey is ***free software*** that you are willing to build and/or use completely ***at your own risk.***
@@ -42,56 +38,53 @@ To uninstall, run the uninstaller from the ```Control Panel``` ```Programs``` an
 
   <table>
     <tr>
-      <th>Input Physical Key(s)</th>
-      <th>Output Logical Key</th>
+      <th>Input Key(s)</th>
+      <th>Output Key</th>
     </tr>
     <tr>
-      <td>Ctrl</td><td>Fn</td>
+      <td><kbd>LCtrl</kbd></td><td><kbd>Fn</kbd></td>
     </tr>
     <tr>
-      <td>Fn</td><td>Left Ctrl</td>
+      <td><kbd>Fn</kbd></td><td><kbd>Left Ctrl</kbd></td>
     </tr>
     <tr>
-      <td>Eject</td><td>Delete</td>
-    </tr>
-  </table>
-
-  And then:
-
-  <table>
-    <tr>
-      <th>Input Logical Key(s)</th>
-      <th>Output Logical Key</th>
+      <td><kbd>⏏︎ Eject</kbd></td><td><kbd>Del</kbd></td>
     </tr>
     <tr>
-      <td>Fn + [F1-F12]</td><td>[F13-F24]</td>
+      <td><kbd>⌘ Cmd</kbd></td><td><kbd>Alt</kbd></td>
+    </tr>    
+    <tr>
+      <td><kbd>⌥ Alt</kbd></td><td><kbd>Cmd</kbd></td>
+    </tr>       
+    <tr>
+      <td><kbd>Fn</kbd>+<kbd>[F1]</kbd>...<kbd>[F12]</kbd></td><td><kbd>[F13]</kbd>...<kbd>[F24]</kbd></td>
     </tr>
     <tr>
-      <td>Fn + Left Ctrl</td><td>Right Ctrl</td>
+      <td><kbd>Fn</kbd>+<kbd>LCtrl</kbd></td><td><kbd>Right Ctrl</kbd></td>
     </tr>
     <tr>
-      <td>Fn + Enter</td><td>Insert</td>
+      <td><kbd>Fn</kbd>+<kbd>Return</kbd></td><td><kbd>Insert</kbd></td>
     </tr>
     <tr>
-      <td>Fn + P</td><td>Print Screen</td>
+      <td><kbd>Fn</kbd>+<kbd>P</kbd></td><td><kbd>Print Screen</kbd></td>
     </tr>
     <tr>
-      <td>Fn + S</td><td>Scroll Lock</td>
+      <td><kbd>Fn</kbd>+<kbd>S</kbd></td><td><kbd>Scroll Lock</kbd></td>
     </tr>
     <tr>
-      <td>Fn + B</td><td>Pause/Break</td>
+      <td><kbd>Fn</kbd>+<kbd>B</kbd></td><td><kbd>Pause/Break</kbd></td>
     </tr>
     <tr>
-      <td>Fn + Up</td><td>Page Up</td>
+      <td><kbd>Fn</kbd>+<kbd>&uarr;</kbd></td><td><kbd>Page Up</kbd></td>
     </tr>
     <tr>
-      <td>Fn + Down</td><td>Page Down</td>
+      <td><kbd>Fn</kbd>+<kbd>&darr;</kbd></td><td><kbd>Page Down</kbd></td>
     </tr>
     <tr>
-      <td>Fn + Left</td><td>Home</td>
+      <td><kbd>Fn</kbd>+<kbd>&larr;</kbd></td><td><kbd>Home</kbd></td>
     </tr>
     <tr>
-      <td>Fn + Right</td><td>End</td>
+      <td><kbd>Fn</kbd>+<kbd>&rarr;</kbd></td><td><kbd>End</kbd></td>
     </tr>
   </table>
 
