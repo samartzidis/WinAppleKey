@@ -113,6 +113,7 @@ To build the driver you will need **Visual Studio 2017** along with an installat
 [![donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TBM5P9X6GZRCL)
 
 
-[![donate-bitcoin](https://img.shields.io/badge/Donate-Bitcoin-orange.svg)](bitcoin:bc1qpu72u9greulx9wx3kukrqag9fgsmzkkjdah872)<br/>
+![donate-bitcoin](https://img.shields.io/badge/Donate-Bitcoin-orange.svg)<br/>
 ![bc1qpu72u9greulx9wx3kukrqag9fgsmzkkjdah872](qr2.png)<br/>
+bc1qpu72u9greulx9wx3kukrqag9fgsmzkkjdah872
 
