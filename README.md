@@ -108,5 +108,11 @@ To build the driver you will need **Visual Studio 2017** along with an installat
   **Windows 10 Driver Kit (WDK)**. For the installer project, you will additionally need to install the **[WiX toolset](http://wixtoolset.org/)** version v3.11
   or better. 
 
+### Donate
+
 [![donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TBM5P9X6GZRCL)
+
+
+[![donate-bitcoin](https://img.shields.io/badge/Donate-Bitcoin-orange.svg)](bitcoin:bc1qpu72u9greulx9wx3kukrqag9fgsmzkkjdah872)<br/>
+![bc1qpu72u9greulx9wx3kukrqag9fgsmzkkjdah872](qr2.png)<br/>
 
