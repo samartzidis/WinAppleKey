@@ -17,7 +17,7 @@ WinAppleKey is implemented as a HIDCLASS LowerFilter WDM kernel mode driver.
 
 ### Installation
 
-**DISCLAIMER:** This driver is signed with a self-signed (test/development) certificate. For that reason, Windows will not directly allow the driver installation unless in **TESTSIGNING** mode. Please be aware that permanently running Windows in **TESTSIGNING** mode leaves your system open to various security risks; so please be aware of what you are doing as any consequence because of this is solely your responsibility. WinAppleKey is ***free software*** that you are willing to build and/or use completely ***at your own risk.***
+**DISCLAIMER:** This driver is signed with a self-signed (test/development) certificate. For that reason, Windows will not directly allow the driver installation unless in **TESTSIGNING** mode. Please be aware that permanently running Windows in **TESTSIGNING** mode leaves your system open to potential security risks; so please be aware of what you are doing as any consequence because of this is solely your responsibility. WinAppleKey is ***free software*** that you are willing to build and/or use completely ***at your own risk.***
 
 **NOTE:** If your system is running a UEFI BIOS, you will need to disable **Secure Boot** through your BIOS first.
 
@@ -30,7 +30,6 @@ You can now run the Setup.msi installer.
 To uninstall, run the uninstaller from the ```Control Panel``` ```Programs``` and then manually revert TESTSIGNING mode by issuing the following command (in an Administrative command prompt):
 
 ``` bcdedit.exe -set TESTSIGNING OFF ```
-
 
 ### Key Mapppings
 
@@ -108,12 +107,19 @@ To build the driver you will need **Visual Studio 2017** along with an installat
   **Windows 10 Driver Kit (WDK)**. For the installer project, you will additionally need to install the **[WiX toolset](http://wixtoolset.org/)** version v3.11
   or better. 
 
+### Freequently Asked Questions
+
+*Aiming to save you some time from sending me an e-mail* :)
+
+#### 1. Will you ever release a full version (i.e. not self-signed) of the driver that does not require Windows running in TESTSIGNING mode?
+Unfortunately I can't. This is due to Microsoft enforced restrictions. In order to fully release a device driver for Windows 10 (and later) you need to run a company (Ltd.) and also purchase a driver signing certificate for that company. Both cost a significant amount of money. WinAppleKey is free and open source and I do not make any money out of it. ***But*** there is similar free software for Apple keyboards, which does not require a driver installation. It uses a custom programmed Raspberry Pi Zero W device that functions as a special USB dongle for using Apple keyboards on Windows. More info [here](https://github.com/samartzidis/RaspiKey).
+
 ### Donate
 
 [![donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TBM5P9X6GZRCL)
 
+**Bitcoin:** bc1qpu72u9greulx9wx3kukrqag9fgsmzkkjdah872
 
-![donate-bitcoin](https://img.shields.io/badge/Donate-Bitcoin-orange.svg)<br/>
-![bc1qpu72u9greulx9wx3kukrqag9fgsmzkkjdah872](qr2.png)<br/>
-bc1qpu72u9greulx9wx3kukrqag9fgsmzkkjdah872
+
+
 
