@@ -38,7 +38,13 @@ void ProcessA1644Buffer(BYTE* buf, ULONG size)
 
 		*pSpecialKey = 0; //Clear special key so that the buffer can be understood by hidclass up the stack	
 	}
-
+	else
+	{
+		if (!g_dwSwapFnCtrl)
+		{
+			g_FakeFnActive = FALSE;
+		}
+	}
 	//Process optional Alt-Cmd swap
 	if (g_dwSwapAltCmd)
 	{
