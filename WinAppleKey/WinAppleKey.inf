@@ -97,8 +97,8 @@ ServiceBinary = %12%\WinAppleKey.sys
 AddReg = HIDKbFlt_Service_AddReg
 
 [HIDKbFlt_Service_AddReg]
-HKR,,SwapAltCmd,%REG_DWORD%, 0
-HKR,,SwapFnCtrl,%REG_DWORD%, 1
+HKR,,SwapAltCmd,0x00010003, 0
+HKR,,SwapFnCtrl,0x00010003, 1
 
 [Dri_BTH_Inst.NT.HW]
 Include = keyboard.inf
