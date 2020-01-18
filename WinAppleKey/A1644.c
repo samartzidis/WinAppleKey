@@ -41,10 +41,9 @@ void ProcessA1644Buffer(BYTE* buf, ULONG size)
 	else
 	{
 		if (!g_dwSwapFnCtrl)
-		{
 			g_FakeFnActive = FALSE;
-		}
 	}
+
 	//Process optional Alt-Cmd swap
 	if (g_dwSwapAltCmd)
 	{
