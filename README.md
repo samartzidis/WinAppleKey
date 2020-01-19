@@ -87,7 +87,7 @@ To uninstall, run the uninstaller from the ```Control Panel``` ```Programs``` an
     </tr>
   </table>
 
-Multimedia Keys:
+**Multimedia Keys:**
 The multimedia keys are not directly mapped as they correspond to F19-F24 instead but you can easily use this [AutoHotkey script](MapMultimediaKeys.ahk) for that purpose.
 
 ### Driver Settings
@@ -112,6 +112,15 @@ To build the driver you will need **Visual Studio 2019** along with an installat
 
 #### 1. Will you ever release a full version (i.e. not self-signed) of the driver that does not require Windows running in TESTSIGNING mode?
 Unfortunately I can't. This is due to Microsoft enforced restrictions. In order to fully release a device driver for Windows 10 (and later) you need to run a company (Ltd.) and also purchase a driver signing certificate for that company. Both cost a significant amount of money. WinAppleKey is free and open source and I do not make any money out of it. ***But*** there is similar free software for Apple keyboards, which does not require a driver installation. It uses a custom programmed Raspberry Pi Zero W device that functions as a special USB dongle for using Apple keyboards on Windows. More info [here](https://github.com/samartzidis/RaspiKey).
+
+#### 2. How can I get the multimedia keys to work?
+
+See paragraph **Multimedia Keys** above.
+
+#### 3. When running in the default fn-ctrl swap mode, the ctrl-lshift-t combination commonly used to reopen a closed browser tab in Chrome does not work.
+
+This is most likely a problem of the Apple keyboard hardware rather than the driver. You can use the ctrl-rshift-t combination instead.
+
 
 ### Donate
 
