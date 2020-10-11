@@ -271,7 +271,11 @@ NTSTATUS InternalIoctlComplete(IN PDEVICE_OBJECT fido, IN PIRP irp, IN PVOID con
 				DebugPrint("InternalIoctlComplete BRB_L2CA_ACL_TRANSFER: Buffer = 0x%x, BufferSize = %lu\n", buf, size);
 
 				if (buf && size == 11)
+				{
+					DebugPrintBuffer("ProcessA1644Buffer(): <= ", buf, size);
 					ProcessA1644Buffer(buf + 2, 9);
+					DebugPrintBuffer("ProcessA1644Buffer(): => ", buf, size);
+				}
 			}
 		}
 		else if (dwControlCode == IOCTL_INTERNAL_USB_SUBMIT_URB)
@@ -284,7 +288,11 @@ NTSTATUS InternalIoctlComplete(IN PDEVICE_OBJECT fido, IN PIRP irp, IN PVOID con
 				DebugPrint("InternalIoctlComplete URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER: TransferBuffer = 0x%x, TransferBufferLength = %lu\n", buf, size);
 
 				if (buf && size == 10)
+				{
+					DebugPrintBuffer("ProcessA1644Buffer(): <= ", buf, size);
 					ProcessA1644Buffer(buf + 1, 9);
+					DebugPrintBuffer("ProcessA1644Buffer(): => ", buf, size);
+				}
 			}
 		}
 	}

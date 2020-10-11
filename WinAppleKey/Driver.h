@@ -41,9 +41,12 @@ extern "C" {
 
 	enum HidCodes
 	{
+		HidKeyNone = 0x0, // No key pressed
+		HidKeyErrOvf = 0x1, //  Keyboard Error Roll Over - used for all slots if too many keys are pressed
 		HidKeyB = 0x5,
 		HidKeyP = 0x13,
 		HidKeyS = 0x16,
+		HidKeyT = 0x17,
 		HidF1 = 0x3a,
 		HidF2 = 0x3b,
 		HidF3 = 0x3c,
@@ -87,7 +90,9 @@ extern "C" {
 		HidLAltMask = 0x4,
 		HidRAltMask = 0x40,
 		HidLCmdMask = 0x8,
-		HidRCmdMask = 0x80
+		HidRCmdMask = 0x80,
+		HidLShiftMask = 0x2,
+		HidRShiftMask = 0x20
 	};
 
 	// Device extension structure
