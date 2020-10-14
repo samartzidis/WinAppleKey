@@ -85,7 +85,7 @@ To uninstall, run the uninstaller from the ```Control Panel``` ```Programs``` an
   </table>
 
 **Multimedia Keys:**
-The multimedia keys are not directly mapped as they correspond to F19-F24 instead but you can easily use this [AutoHotkey script](MapMultimediaKeys.ahk) for that purpose.
+The multimedia keys are not directly mapped as they correspond to F19-F24 instead but you can easily use this [AutoHotkey script](MapMultimediaKeys.ahk) for that purpose. Please note that this currently works only over the wired connection.
 
 ### Driver Settings
 
@@ -114,15 +114,12 @@ Unfortunately I can't. This is due to Microsoft enforced restrictions. In order 
 
 See paragraph **Multimedia Keys** above.
 
-#### 3. When running in the default fn-ctrl swap mode, the ctrl-lshift-t combination commonly used to reopen a closed browser tab in Chrome does not work.
-
-This is most likely a problem of the Apple keyboard hardware rather than the driver. You can use the ctrl-rshift-t combination instead.
-
 
 ### Donate
 
 [![donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TBM5P9X6GZRCL)
-
+<br/>
+**Bitcoin:** bc1qjvpnmcsddxshg374k3xumlslcduv3vf4lp9yc7
 
 
 
