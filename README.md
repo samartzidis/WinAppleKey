@@ -114,6 +114,9 @@ Unfortunately I can't. This is due to Microsoft enforced restrictions. In order 
 
 See paragraph **Multimedia Keys** above.
 
+#### 3. When running in the default fn-ctrl swap mode, the ctrl-lshift-t combination commonly used to reopen a closed browser tab in Chrome does not work.
+
+This is an issue of the Apple keyboard hardware rather than the driver. You can use the ctrl-rshift-t combination instead.
 
 ### Donate
 

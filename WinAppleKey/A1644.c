@@ -14,14 +14,14 @@ void ProcessA1644Buffer(BYTE* buf, ULONG size)
 	BYTE* pSpecialKey = &buf[8];
 
 	// Workaround for Fn + LShift + T (which causes roll over key error)
-	if (g_dwSwapFnCtrl && (*pKey1 == HidKeyErrOvf && *pKey2 == HidKeyErrOvf && *pKey3 == HidKeyErrOvf && *pKey4 == HidKeyErrOvf && *pKey5 == HidKeyErrOvf && *pKey6 == HidKeyErrOvf))
-	{
-		RtlZeroMemory(buf, size);
-		*pModifier = (HidLShiftMask | HidLCtrlMask); // Set LShift + LCtrl modifier
-		*pKey1 = HidKeyT;
+	//if (g_dwSwapFnCtrl && (*pKey1 == HidKeyErrOvf && *pKey2 == HidKeyErrOvf && *pKey3 == HidKeyErrOvf && *pKey4 == HidKeyErrOvf && *pKey5 == HidKeyErrOvf && *pKey6 == HidKeyErrOvf))
+	//{
+	//	RtlZeroMemory(buf, size);
+	//	*pModifier = (HidLShiftMask | HidLCtrlMask); // Set LShift + LCtrl modifier
+	//	*pKey1 = HidKeyT;
 
-		return;
-	}
+	//	return;
+	//}
 
 	// SwapFnCtrl mode
 	if (g_dwSwapFnCtrl)
