@@ -120,11 +120,7 @@ This is an issue of the Apple keyboard hardware rather than the driver. You can 
 
 You will need to disable Windows **Secure Boot**, please read the *Disclaimer* part.
 
-### Donate
 
-[![donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TBM5P9X6GZRCL)
-<br/>
-**Bitcoin:** bc1qecklcec0z2hzv7twf97p2tr44syw5z5aqmamrt
 
 
 
