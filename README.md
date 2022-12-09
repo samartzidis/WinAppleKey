@@ -106,7 +106,7 @@ To build the driver you will need **Visual Studio 2019** along with an installat
 *Aiming to save you some time from sending me an e-mail* :)
 
 #### 1. Will you ever release a full version (i.e. not self-signed) of the driver that does not require Windows running in TESTSIGNING mode?
-Unfortunately I can't. This is due to Microsoft enforced restrictions. In order to fully release a device driver for Windows 10 (and later) you need to run a company (Ltd.) and also purchase a driver signing certificate for that company. Both cost a significant amount of money. WinAppleKey is free and open source and I do not make any money from it.
+Unfortunately I can't. This is due to Microsoft enforced restrictions. In order to fully release a device driver for Windows 10 (and later) you need to run a registered company and also purchase a driver signing certificate for that company. Both cost a significant amount of money. WinAppleKey is free and open source and I do not make any money from it.
 
 #### 2. How can I get the multimedia keys to work?
 
