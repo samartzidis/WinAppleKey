@@ -6,7 +6,7 @@ Feafures:
 - Swaps the Fn-Ctrl keys to align with standard Windows keyboard layouts (fearture not supported by Apple's Bootcamp driver).
 - Maps the missing Windows keys such as the Del, Insert, Print Screen, Pause/Break, etc.
 
-**IMPORTANT:** Please note that this driver *only* works in Windows 10 and *only* for the A1644 keyboard model - nothing else. I have no plans to make any further changes to this project as Microsoft has made it really difficult for anyone else except for big businesses to create drivers for their OS due to the cost of obtaining signing certificates and the complicated signing and approval process involved. I have therefore started another project [magicstick.io](https://github.com/samartzidis/magicstick.io), which works great without any of these issues.
+**IMPORTANT:** Please note that this driver *only* works in Windows 10 and *only* for the A1644 keyboard model.
 
 ### Technical Details
 
