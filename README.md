@@ -121,7 +121,7 @@ This is an issue of the Apple keyboard hardware rather than the driver. You can 
 You must disable Windows **Secure Boot**, please read the *Disclaimer* part.
 
 #### 5. Will you ever implement support for Windows 11 and other Apple keyboards such as A1314, A2450, A2449?
-I have no plans to further work on this project due to FAQ (1) above. Instead, I have started a new project **[magicstick.io](https://github.com/samartzidis/magicstick.io)** that already does these and more.
+I have no plans to further work on this project due to FAQ-1 above. Instead, I have started a new project **[magicstick.io](https://github.com/samartzidis/magicstick.io)** that already does these and more.
 
 
 
