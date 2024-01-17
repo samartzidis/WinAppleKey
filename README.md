@@ -103,16 +103,14 @@ After changing any of these values, you will need to disconnect/connect your ass
 To build the driver you will need **Visual Studio 2019** along with an installation of the 
   **Windows 10 Driver Kit (WDK)**. For the installer project, you will additionally need to install the **[WiX toolset](http://wixtoolset.org/)**. 
 
-### Freequently Asked Questions
-
-*To save you some time from sending me an e-mail* :)
+### Frequently Asked Questions
 
 #### 1. Will you ever release a full version (i.e. not self-signed) of the driver that does not require Windows running in TESTSIGNING mode?
-Unfortunately I can't. This is due to Microsoft enforced restrictions. In order to fully release a device driver for Windows 10 (and later) you need to run a registered company and also purchase a driver signing certificate for that company. Both cost a significant amount of money. WinAppleKey is free and open source and I do not make any money from it.
+Unfortunately, I can't. This is due to Microsoft's enforced restrictions for Windows drivers. To fully release a device driver for Windows 10 (and later) you need to run a registered company and subsequently purchase a quite expensive driver signing certificate for that company. Both cost time and money. This driver is free and open source and I do not make any money from it - so no.
 
 #### 2. How can I get the multimedia keys to work?
 
-See paragraph **Multimedia Keys** above.
+Please take a look at paragraph **Multimedia Keys** above.
 
 #### 3. When running in the default fn-ctrl swap mode, the ctrl-lshift-t combination commonly used to reopen a closed browser tab in Chrome does not work.
 
@@ -120,7 +118,10 @@ This is an issue of the Apple keyboard hardware rather than the driver. You can 
 
 #### 4. I am trying to enable Test Signing mode but I get this error: ```The value is protected by Secure Boot policy and cannot be modified or deleted```.
 
-You will need to disable Windows **Secure Boot**, please read the *Disclaimer* part.
+You must disable Windows **Secure Boot**, please read the *Disclaimer* part.
+
+#### 5. Will you ever implement support for Windows 11 and other Apple keyboards such as A1314, A2450, A2449?
+I have no plans to further work on this project due to FAQ (1) above. Instead, I have started a new project **[magicstick.io](https://github.com/samartzidis/magicstick.io)** that already does these and more.
 
 
 
