@@ -2,7 +2,7 @@
 
 Apple Magic Keyboard A1644 driver for Windows 10.
 
-*Please note that this driver **only** works in **Windows 10** and **only** for the **A1644** (Apple Magic Keyboard) model.*
+*Please note that this driver **only** works in **Windows 10** and **only** for the **A1644** (Apple Magic Keyboard) model (see: [FAQ.5](#5-will-you-ever-implement-support-for-windows-11-and-other-apple-keyboards-such-as-a1314-a2450-a2449)).*
 
 Features: 
 - Swaps the Fn-Ctrl keys to align with standard Windows keyboard layouts (fearture not supported by Apple's Bootcamp driver).
@@ -121,7 +121,7 @@ This is an issue of the Apple keyboard hardware rather than the driver. You can 
 You must disable Windows **Secure Boot**, please read the *Disclaimer* part.
 
 #### 5. Will you ever implement support for Windows 11 and other Apple keyboards such as A1314, A2450, A2449?
-I have no plans to further work on this project due to FAQ.1 above. Instead, I have started a new project **[magicstick.io](https://github.com/samartzidis/magicstick.io)** that already does these and more.
+I have no plans to further work on **WinAppleKey** primarily due to my answer in FAQ.1 above and the user restrictions (e.g. some PC games don't work) and security implications (e.g. no SecureBoot) of having to run Windows in TESTSIGNING mode. Instead, have started this project **[magicstick.io](https://github.com/samartzidis/magicstick.io)** that already supports these keyboard models plus does more.
 
 
 
